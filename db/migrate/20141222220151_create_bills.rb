@@ -8,6 +8,8 @@ class CreateBills < ActiveRecord::Migration
       t.float :amount
       t.boolean :is_paid, default: false
 
+      t.references :user
+
       t.timestamps
     end
   end

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20141222220151) do
     t.string   "category"
     t.float    "amount"
     t.boolean  "is_paid",     default: false
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
