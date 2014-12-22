@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duedate: 2014-12-22 15:01:51
+  lender: MyString
+  description: MyText
+  category: MyString
+  amount: 
+  is_paid: false
+
+two:
+  duedate: 2014-12-22 15:01:51
+  lender: MyString
+  description: MyText
+  category: MyString
+  amount: 
+  is_paid: false
