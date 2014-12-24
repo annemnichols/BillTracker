@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20141222220151) do
   enable_extension "plpgsql"
 
   create_table "bills", force: true do |t|
-    t.datetime "duedate"
+    t.date     "duedate"
     t.string   "lender"
     t.text     "description"
     t.string   "category"
-    t.float    "amount"
-    t.boolean  "is_paid",     default: false
+    t.decimal  "amount",      precision: 8, scale: 2
+    t.boolean  "is_paid",                             default: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"

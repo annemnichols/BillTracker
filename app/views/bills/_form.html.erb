@@ -1,0 +1,18 @@
+<div class = "bill-form">
+	<br>
+	<%= form_for [@user, @bill] do |f| %>
+
+		<%= f.text_field :duedate, :class => "datepicker", placeholder: 'Due Date' %><br><br>
+		
+		<%= f.text_field :lender, class: "form-control input-lg", placeholder: 'Lender'  %><br><br>
+
+		<%= f.text_field :description, class: "form-control input-lg", placeholder: 'Description'  %><br><br>
+
+	  <%= f.text_field :category, class: "form-control input-lg", placeholder: 'Category'  %><br><br>
+
+	  <%= f.text_field :amount, class: "form-control input-lg", placeholder: '$0.00'  %><br><br>
+
+		<%= f.submit class: "btn btn-success btn-lg user-button" %>
+	<% end %>
+	<br>
+</div>

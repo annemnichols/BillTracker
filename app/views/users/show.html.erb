@@ -1,2 +1,38 @@
 <h1><%= @user.username %></h1>
-<p>User profile page here.</p>
+<h3><%= @user.email %></h3>
+<%= link_to 'Edit Profile', edit_user_registration_path(@user), class: "btn btn-success btn-lg user-button" %>
+<br>
+<div class="debt-table">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th colspan="6" class="table-header">Your Bills</th>
+			</tr>
+			<tr>
+				<th>Due Date</th>
+				<th>Lender</th>
+				<th>Description</th>
+				<th>Category</th>
+				<th>Amount</th>
+				<th>Paid?</th>
+				<th>Edit Bill</th>
+				<th>Delete Bill</th>
+			</tr>
+		</thead>
+		<tbody>      
+			<% @user.bills.each do |bill| %>
+				<tr>
+					<td><%= bill.duedate %></td>
+					<td><%= bill.lender %></td>
+					<td><%= bill.description %></td>
+					<td><%= bill.category %></td>
+					<td><%= number_to_currency(bill.amount, :unit => "$") %></td>
+					<td><%= bill.is_paid %></td>
+					<td><%= link_to 'Edit', edit_user_bill_path(@user, bill), class: "btn btn-success btn-lg user-button" %></td>
+					<td><%= link_to 'Delete', user_bill_path(@user, bill), method: :delete, class: "btn btn-success btn-lg user-button" %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<%= link_to 'New Bill', new_user_bill_path(@user), class: "btn btn-success btn-lg user-button" %>
