@@ -1,2 +1,5 @@
-<h1>Bills#new</h1>
-<p>Find me in app/views/bills/new.html.erb</p>
+<h1>New Bill</h1>
+
+<%= render 'bills/form' %>
+
+<%= link_to 'Back', user_path(@user), class: "btn btn-success btn-lg user-button" %>

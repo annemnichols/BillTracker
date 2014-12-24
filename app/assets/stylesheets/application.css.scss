@@ -12,9 +12,11 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap-datepicker
  */ 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 .title {
 	text-align: center;
@@ -23,4 +25,8 @@
 
 .user-list {
 	list-style: none;
+}
+
+.bill-form {
+	width: 30%;
 }
